@@ -1,0 +1,716 @@
+{
+  "metadata": {
+    "last_updated": "28/08/2026"
+  },
+  "food_diary": {
+    "entries": [
+      {
+        "id": 1,
+        "date": "14/07/26",
+        "place": "Kedai mie tiga soodara",
+        "food": "Ayam merah",
+        "price": "16k",
+        "rating": 9,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/elaravoid/sunera-sae/media/20260826_201119.png"
+      },
+      {
+        "id": 2,
+        "date": "14/07/26",
+        "place": "Kedai mie tiga soodara",
+        "food": "Ayam merah",
+        "price": "16k",
+        "rating": 9,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/elaravoid/sunera-sae/media/20260826_200454.png"
+      },
+      {
+        "id": 3,
+        "date": "14/07/26",
+        "place": "Kedai mie tiga soodara",
+        "food": "Ayam merah",
+        "price": "16k",
+        "rating": 9,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/elaravoid/sunera-sae/media/20260825_200246.png"
+      },
+      {
+        "id": 4,
+        "date": "14/07/26",
+        "place": "Kedai mie tiga soodara",
+        "food": "Ayam merah",
+        "price": "16k",
+        "rating": 9,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260714_154008.jpg"
+      },
+      {
+        "id": 5,
+        "date": "13/07/26",
+        "place": "Misoa Club",
+        "food": "Misoa kuah mala",
+        "price": "29k",
+        "rating": 8,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260713_212441.jpg"
+      },
+      {
+        "id": 6,
+        "date": "12/07/26",
+        "place": "Bedilan cafe",
+        "food": "Bakmie",
+        "price": "16k",
+        "rating": 7,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260712_095407.jpg"
+      },
+      {
+        "id": 7,
+        "date": "11/07/26",
+        "place": "Ilalang",
+        "food": "Ketan susu coklat keju",
+        "price": "9k",
+        "rating": 7,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260711_180036.jpg"
+      },
+      {
+        "id": 8,
+        "date": "11/07/26",
+        "place": "Ilalang",
+        "food": "Baso aci",
+        "price": "12k",
+        "rating": 8.5,
+        "notes": "asin kali",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260711_180036.jpg"
+      },
+      {
+        "id": 9,
+        "date": "11/07/26",
+        "place": "Ilalang",
+        "food": "Coffee latte",
+        "price": "14k",
+        "rating": 7.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260711_180036.jpg"
+      },
+      {
+        "id": 10,
+        "date": "09/07/26",
+        "place": "Nasgor depan bank jatim",
+        "food": "Nasgor jamur",
+        "price": "12k",
+        "rating": 8,
+        "notes": "yang pedes beneran pedes",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260709_193045.jpg"
+      },
+      {
+        "id": 11,
+        "date": "21/06/26",
+        "place": "",
+        "food": "Dragon hot pot",
+        "price": "",
+        "rating": 8,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260621_125109.jpg"
+      },
+      {
+        "id": 12,
+        "date": "19/06/26",
+        "place": "Alfamart x lawson",
+        "food": "Mala spicy noodles",
+        "price": "",
+        "rating": 6.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260619_214929.jpg"
+      },
+      {
+        "id": 13,
+        "date": "18/06/26",
+        "place": "",
+        "food": "Seblak nyangkem lv 1",
+        "price": "12k",
+        "rating": 7.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260618_164959.jpg"
+      },
+      {
+        "id": 14,
+        "date": "04/06/26",
+        "place": "Waroeng spesial sambal ss",
+        "food": "Nila bakar pedas & tumis jamur",
+        "price": "",
+        "rating": 10,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260604_111257.jpg"
+      },
+      {
+        "id": 15,
+        "date": "03/06/26",
+        "place": "1/15 araya",
+        "food": "Banana waffle",
+        "price": "",
+        "rating": 8,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260603_155359.jpg"
+      },
+      {
+        "id": 16,
+        "date": "02/06/26",
+        "place": "Haengbocorner",
+        "food": "Burnt cheese cake brownies",
+        "price": "",
+        "rating": 8,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260602_125259.jpg"
+      },
+      {
+        "id": 17,
+        "date": "02/06/26",
+        "place": "Haengbocorner",
+        "food": "Red velvet",
+        "price": "",
+        "rating": 7.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260602_125259.jpg"
+      },
+      {
+        "id": 18,
+        "date": "01/06/26",
+        "place": "Nasi goreng deket sadewa",
+        "food": "Nasi goreng",
+        "price": "",
+        "rating": 8,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260601_195808.jpg"
+      },
+      {
+        "id": 19,
+        "date": "21/05/26",
+        "place": "Kuno kini",
+        "food": "Sate ayam & jamur",
+        "price": "",
+        "rating": 9,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260521_182208.jpg"
+      },
+      {
+        "id": 20,
+        "date": "18/05/26",
+        "place": "Dapur meyta",
+        "food": "Ceker tanpa tulang",
+        "price": "",
+        "rating": 7,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260518_150011.jpg"
+      },
+      {
+        "id": 21,
+        "date": "16/05/26",
+        "place": "Bakso solo sawojajar",
+        "food": "Bakso bakar",
+        "price": "",
+        "rating": 9,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260516_102016.jpg"
+      },
+      {
+        "id": 22,
+        "date": "15/05/26",
+        "place": "Doelor Sawojajar",
+        "food": "Bebek goreng",
+        "price": "",
+        "rating": 8.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260515_192339.jpg"
+      },
+      {
+        "id": 23,
+        "date": "15/05/26",
+        "place": "Robucca",
+        "food": "Gyu don",
+        "price": "",
+        "rating": 6,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260515_111319.jpg"
+      },
+      {
+        "id": 24,
+        "date": "14/05/26",
+        "place": "Malang night paradise",
+        "food": "Soto",
+        "price": "",
+        "rating": 8.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260514_215811.jpg"
+      },
+      {
+        "id": 25,
+        "date": "14/05/26",
+        "place": "Toko kopi sumber rejeki kayutangan",
+        "food": "Ayam bakar bali",
+        "price": "",
+        "rating": 6,
+        "notes": "Lupa tapi kayaknya",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260514_095546.jpg"
+      },
+      {
+        "id": 26,
+        "date": "05/05/26",
+        "place": "Bebek sakerah",
+        "food": "Bebek",
+        "price": "",
+        "rating": 6.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260505_181140.jpg"
+      },
+      {
+        "id": 27,
+        "date": "04/05/26",
+        "place": "Buatan yul",
+        "food": "Pisang goreng",
+        "price": "",
+        "rating": 9,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260504_213908.jpg"
+      },
+      {
+        "id": 28,
+        "date": "24/04/26",
+        "place": "",
+        "food": "Umayumcha",
+        "price": "",
+        "rating": 8,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260424_172505.jpg"
+      },
+      {
+        "id": 29,
+        "date": "23/04/26",
+        "place": "Chikuro",
+        "food": "Royal garlic cream cheese, signature japanese truffle, spicy",
+        "price": "",
+        "rating": 8.5,
+        "notes": "#firsttry",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260423_115657.jpg"
+      },
+      {
+        "id": 30,
+        "date": "10/04/26",
+        "place": "Soto ayam kampung neng pina Pacet",
+        "food": "Soto ayam",
+        "price": "",
+        "rating": 8,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260410_074314.jpg"
+      },
+      {
+        "id": 31,
+        "date": "09/04/26",
+        "place": "Depot pak gono",
+        "food": "Lontong kikil",
+        "price": "",
+        "rating": 6.5,
+        "notes": "#firsttry",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260409_103003.jpg"
+      },
+      {
+        "id": 32,
+        "date": "07/04/26",
+        "place": "Dua Makna",
+        "food": "Ricebowl daunjeruk suwir pedas",
+        "price": "",
+        "rating": 8.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260407_112741.jpg"
+      },
+      {
+        "id": 33,
+        "date": "25/03/26",
+        "place": "CS Mojokerto",
+        "food": "Ubi cilembu",
+        "price": "",
+        "rating": 7,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260325_181205.jpg"
+      },
+      {
+        "id": 34,
+        "date": "18/03/26",
+        "place": "",
+        "food": "Chocolate thumbprint cookies",
+        "price": "",
+        "rating": 5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260318_152908.jpg"
+      },
+      {
+        "id": 35,
+        "date": "16/03/26",
+        "place": "",
+        "food": "Palm sugar cheese cookies",
+        "price": "",
+        "rating": 7.5,
+        "notes": "#baking",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260316-WA0018.jpg"
+      },
+      {
+        "id": 36,
+        "date": "13/03/26",
+        "place": "Seblak jeng sri",
+        "food": "Seblak",
+        "price": "",
+        "rating": 8.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260313_182941.jpg"
+      },
+      {
+        "id": 37,
+        "date": "28/02/26",
+        "place": "Ramen ya!",
+        "food": "Ramen",
+        "price": "",
+        "rating": 8.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260228_182109.jpg"
+      },
+      {
+        "id": 38,
+        "date": "20/02/26",
+        "place": "Pioneer BTU",
+        "food": "Pisang & nangka goreng widjen",
+        "price": "",
+        "rating": 9,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260220_175216.jpg"
+      },
+      {
+        "id": 39,
+        "date": "18/02/26",
+        "place": "",
+        "food": "Super Chicken",
+        "price": "",
+        "rating": 8,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260218-WA0059.jpg"
+      },
+      {
+        "id": 40,
+        "date": "23/02/25",
+        "place": "",
+        "food": "Sate maranggi",
+        "price": "",
+        "rating": null,
+        "notes": "#firsttry",
+        "image_url": "https://ik.imagekit.io/divivava/food/20260223-WA0054.jpeg"
+      },
+      {
+        "id": 41,
+        "date": "22/12/25",
+        "place": "",
+        "food": "Kreco",
+        "price": "5k",
+        "rating": 7.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20251222_174229.jpg"
+      },
+      {
+        "id": 42,
+        "date": "08/11/25",
+        "place": "Kober",
+        "food": "Wonton koma",
+        "price": "",
+        "rating": 7.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20251108_194211.jpg"
+      },
+      {
+        "id": 43,
+        "date": "11/09/25",
+        "place": "",
+        "food": "Keikpop ultah septy",
+        "price": "",
+        "rating": 8.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250926-WA0050.jpg"
+      },
+      {
+        "id": 44,
+        "date": "11/09/25",
+        "place": "Pengabdi sate",
+        "food": "Sate",
+        "price": "",
+        "rating": 8,
+        "notes": "lupa foto",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250911-WA0013.jpeg"
+      },
+      {
+        "id": 45,
+        "date": "23/08/25",
+        "place": "Mie bakar celaket",
+        "food": "Mie bakar",
+        "price": "",
+        "rating": 8.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250823_173532.jpg"
+      },
+      {
+        "id": 46,
+        "date": "18/08/25",
+        "place": "Cafe lailai",
+        "food": "",
+        "price": "",
+        "rating": 8,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250818_175623.jpg"
+      },
+      {
+        "id": 47,
+        "date": "13/08/25",
+        "place": "Ceker perempatan kandangan",
+        "food": "Ceker",
+        "price": "",
+        "rating": 9,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250813_204540.jpg"
+      },
+      {
+        "id": 48,
+        "date": "19/07/25",
+        "place": "Ombe kofie araya",
+        "food": "",
+        "price": "",
+        "rating": 8.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250719-WA0016.jpg"
+      },
+      {
+        "id": 49,
+        "date": "13/07/25",
+        "place": "Bakso pedas mak pik",
+        "food": "Bakso",
+        "price": "",
+        "rating": 9,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250713_143446.jpg"
+      },
+      {
+        "id": 50,
+        "date": "05/07/25",
+        "place": "Warung agrin",
+        "food": "Pudding",
+        "price": "",
+        "rating": 8,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250705_173518.jpg"
+      },
+      {
+        "id": 51,
+        "date": "02/06/25",
+        "place": "Samihoki",
+        "food": "Kwetiauw goreng",
+        "price": "",
+        "rating": 7.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250602_200841.jpg"
+      },
+      {
+        "id": 52,
+        "date": "14/04/25",
+        "place": "Capitol cafe",
+        "food": "Butter chicken rice",
+        "price": "",
+        "rating": 8.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250414_122817.jpg"
+      },
+      {
+        "id": 53,
+        "date": "13/04/25",
+        "place": "Oriental kopi",
+        "food": "Oriental hainanese chicken rice",
+        "price": "",
+        "rating": 9,
+        "notes": "#firsttry",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250413_114727.jpg"
+      },
+      {
+        "id": 54,
+        "date": "13/04/25",
+        "place": "Oriental kopi",
+        "food": "Eggtart",
+        "price": "",
+        "rating": 6,
+        "notes": "#firsttry",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250413_114727.jpg"
+      },
+      {
+        "id": 55,
+        "date": "12/04/25",
+        "place": "Dino's thai food",
+        "food": "Padthai",
+        "price": "",
+        "rating": 8,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250412-WA0012.jpg"
+      },
+      {
+        "id": 56,
+        "date": "12/04/25",
+        "place": "Encik tan",
+        "food": "Laksa",
+        "price": "",
+        "rating": 6,
+        "notes": "#firsttry",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250412-WA0011.jpg"
+      },
+      {
+        "id": 57,
+        "date": "11/04/25",
+        "place": "Jinjja chicken",
+        "food": "Chicken",
+        "price": "",
+        "rating": 10,
+        "notes": "#firsttry",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250411_201135.jpg"
+      },
+      {
+        "id": 58,
+        "date": "11/04/25",
+        "place": "Chagee",
+        "food": "Varian lupa",
+        "price": "",
+        "rating": 9,
+        "notes": "#firsttry",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250411_185558.jpg"
+      },
+      {
+        "id": 59,
+        "date": "11/04/25",
+        "place": "Mr. coconut",
+        "food": "Coconut drink",
+        "price": "",
+        "rating": 10,
+        "notes": "#firsttry",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250411-WA0186.jpg"
+      },
+      {
+        "id": 60,
+        "date": "10/04/25",
+        "place": "Nasi lemak ayam taliwang",
+        "food": "Nasi lemak ayam kecap sambal",
+        "price": "",
+        "rating": 9.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250410_214845.jpg"
+      },
+      {
+        "id": 61,
+        "date": "10/04/25",
+        "place": "Taochew fishball noodle changi",
+        "food": "Fishball noodle",
+        "price": "",
+        "rating": 7,
+        "notes": "#firsttry",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250410_153509.jpg"
+      },
+      {
+        "id": 62,
+        "date": "01/04/25",
+        "place": "Diberi tetangga",
+        "food": "Bakso pecel",
+        "price": "",
+        "rating": 10,
+        "notes": "#firsttry",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250401_075209.jpg"
+      },
+      {
+        "id": 63,
+        "date": "21/03/25",
+        "place": "Khang dimsum",
+        "food": "Dimsum",
+        "price": "",
+        "rating": 7.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250321_181010.jpg"
+      },
+      {
+        "id": 64,
+        "date": "13/03/25",
+        "place": "Saung kang mas pare",
+        "food": "",
+        "price": "",
+        "rating": 8,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250313_163234.jpg"
+      },
+      {
+        "id": 65,
+        "date": "17/02/25",
+        "place": "Bebek bumbu gurih mbok mey",
+        "food": "Bebek",
+        "price": "",
+        "rating": 8.5,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250217-WA0013.jpg"
+      },
+      {
+        "id": 66,
+        "date": "06/02/25",
+        "place": "Naoki",
+        "food": "Chicken xo teriyaki rice",
+        "price": "",
+        "rating": 8,
+        "notes": "",
+        "image_url": "https://ik.imagekit.io/divivava/food/20250206_141050.jpg"
+      }
+    ]
+  },
+  "wishlist": {
+    "never_eat_yet": [
+      "Soto betawi",
+      "Soto banjar",
+      "Soto tangkar",
+      "Sate padang",
+      "Ayam pop",
+      "Sup konro",
+      "Mangut lele",
+      "Gudeg",
+      "Selat solo",
+      "Rahang tuna",
+      "Pad kra pao",
+      "Pho",
+      "Banh mi",
+      "Adobo",
+      "Mapo tofu",
+      "Xiaolongbao",
+      "Japchae",
+      "Samgyetang",
+      "Bibimbap",
+      "Sour sally",
+      "Crispy creme",
+      "Salted bread",
+      "Chagee di indo",
+      "Sriracha",
+      "Zuppa soup",
+      "Lasagna",
+      "Acai bowls",
+      "Pavlova",
+      "Gultik",
+      "Kerak telor",
+      "Beef wellington",
+      "Bakmoy",
+      "Gongcha",
+      "Siwalan",
+      "Musang king"
+    ],
+    "want_more": [
+      "Dubai chewy cookie",
+      "Mr coconut",
+      "Korean chicken",
+      "Nasi ayam hainan",
+      "Mango sticky rice",
+      "Bakso pecel"
+    ]
+  }
+}

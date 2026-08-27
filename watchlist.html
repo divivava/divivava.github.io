@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>divivava's watchlist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      font-size: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scrollbar-width: thin;
+      font-family: "Ubuntu Mono", monospace;
+    }
+
+    body {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% - 14rem);
+      color: #000000;
+      border: 2px solid black;
+      box-shadow: 0px 0px 1rem grey;
+    }
+
+    main {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 0px;
+      overflow: auto;
+      height: 32rem;
+    }
+
+    header {
+      background: rgb(255, 255, 130);
+      height: 3rem;
+      border-bottom: 2px solid black;
+      padding: 1rem;
+      font-size: 1rem;
+      text-align: center;
+      align-content: center;
+      display: flex;
+      justify-content: space-between;
+      align-content: space-between;
+    }
+
+    .links,
+    .backs {
+      display: flex;
+      align-self: center;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    header span {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      background: lightblue;
+      padding: 0px 6px;
+      border-radius: 1rem;
+    }
+
+    header a {
+      color: black;
+      text-decoration: none;
+      text-shadow: none;
+      font-weight: bold;
+    }
+
+    header a:hover {
+      color: lightblue;
+    }
+
+    .kiri {
+      width: 20%;
+      height: 100%;
+      background: pink;
+      padding: 1rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      border-right: 2px dashed black;
+    }
+
+    .filter {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0.5rem
+    }
+
+    .filter-group {
+      width: 100%;
+    }
+
+    .filter-group label {
+      font-weight: bold;
+      display: none;
+      font-size: 1rem;
+    }
+
+    .filter-group select,
+    .filter-group input {
+      padding: 3px 5px;
+      border: 2px hotpink outset;
+      background: white;
+      box-shadow: inset 0 0 1rem rgb(255, 255, 107);
+      font-size: 1rem;
+      border-radius: 0;
+      outline: none;
+      width: 100%;
+    }
+
+    .filter-group select:focus,
+    .filter-group input:focus {
+      background: #fff;
+    }
+
+    .kanan {
+      width: 80%;
+      height: 100%;
+      padding: 1rem;
+      overflow-y: auto;
+      overflow-x: hidden;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='16' height='16' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(135)'%3E%3Crect width='100%25' height='100%25' fill='rgba(255, 255, 255,1)'/%3E%3Ccircle cx='40' cy='20' r='4' fill='rgba(173, 216, 230,0.5)'/%3E%3Ccircle cx='0' cy='20' r='4' fill='rgba(173, 216, 230,0.5)'/%3E%3Ccircle cx='20' cy='40' r='4' fill='rgba(173, 216, 230,0.5)'/%3E%3Ccircle cx='20' cy='0' r='4' fill='rgba(173, 216, 230,0.5)'/%3E%3Ccircle cx='40' cy='0' r='4' fill='rgba(255, 255, 130, 1)'/%3E%3Ccircle cx='0' cy='40' r='4' fill='rgba(255, 255, 130, 1)'/%3E%3Ccircle cx='40' cy='40' r='4' fill='rgba(255, 255, 130, 1)'/%3E%3Ccircle cx='0' cy='0' r='4' fill='rgba(255, 255, 130, 1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ")
+    }
+
+    .movie,
+    .series {
+      padding: 0.5rem;
+      border: 2px outset #ccc;
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      width: 100%;
+      max-height: 18rem;
+      background: rgba(255, 255, 240, 0.5);
+      align-items: stretch;
+      border-radius: 0 2rem 0 2rem;
+    }
+
+    .movie {
+      border-color: plum;
+      background: rgba(221, 160, 221, 0.25);
+    }
+
+    .series {
+      border-color: lightblue;
+      background: rgba(173, 216, 230, 0.5);
+    }
+
+    .movie picture,
+    .series picture {
+      width: 40%;
+      height: auto;
+      flex-shrink: 0;
+      align-self: flex-start;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .movie img,
+    .series img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .movie img {
+      border: 2px plum outset;
+    }
+
+    .series img {
+      border: 2px lightblue outset;
+    }
+
+    .info {
+      width: 60%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+      min-height: 0;
+    }
+
+    .movie h4 {
+      font-size: 1.1rem;
+      background: plum;
+      padding: 2px 6px 2px 6px;
+      border-radius: 0 1.5rem 0 0;
+    }
+
+    .series h4 {
+      font-size: 1.1rem;
+      background: lightblue;
+      padding: 2px 6px 2px 6px;
+      border-radius: 0 1.5rem 0 0;
+    }
+
+    .keterangan {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 100%;
+      flex-wrap: wrap;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .movie table,
+    .series table {
+      width: 100%;
+      padding: 2px;
+      background: #fff;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .movie td {
+      border: 2px #dda0dd solid;
+    }
+
+    .series td {
+      border: 2px #add8e6 solid;
+    }
+
+    td {
+      padding: 2px 4px;
+      vertical-align: top;
+    }
+
+    td:first-child {
+      font-weight: bold;
+      width: 25%;
+    }
+
+    .review {
+      width: 100%;
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+    }
+
+    .review p {
+      font-size: 1rem;
+      line-height: 1.1;
+      margin: 0;
+    }
+
+    .hidden-article {
+      display: none !important;
+    }
+
+    .genre-count-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 2px 0;
+      font-size: 1rem;
+      font-weight: normal;
+      position: relative;
+    }
+
+    .genre-count-item .count {
+      background: hotpink;
+      padding: 0px 6px;
+      border-radius: 50%;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .genre-count-item .genre-name {
+      position: relative;
+      flex-shrink: 0;
+      background: pink;
+    }
+
+    .genre-count-item .dots {
+      flex: 1;
+      border-bottom: 1px dashed hotpink;
+      margin: 0px;
+      height: 1em;
+    }
+
+    #resultCount {
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+
+    .reset-button {
+      background: rgba(255, 255, 255);
+      color: hotpink;
+      border: 2px hotpink outset;
+      padding: 4px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: "Ubuntu Mono", monospace;
+      width: 100%;
+      border-radius: 100px;
+    }
+
+    .reset-button:hover {
+      background: hotpink;
+      color: white;
+      transform: scale(1.02);
+    }
+
+    .reset-button:active {
+      transform: scale(0.8);
+    }
+
+    .warna {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      justify-content: flex-end;
+      align-items: end;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .warna-row {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      border: 2px outset;
+      padding: 2px 0.5rem;
+      border-radius: 2rem;
+      background: #fff;
+    }
+
+    .warna-row.movie-badge {
+      box-shadow: inset 0 0 30px #dda0dd;
+      border-color: plum;
+    }
+
+    .warna-row.series-badge {
+      box-shadow: inset 0 0 30px #add8e6;
+      border-color: lightblue;
+    }
+
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      font-size: 1.2rem;
+      color: #666;
+      grid-column: 1 / -1;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        height: 94.1%;
+      }
+
+      body {
+        height: calc(100% - 1rem);
+        width: calc(100% - 1rem);
+        overflow: hidden;
+        box-shadow: none;
+      }
+
+      header {
+        height: 5.9%;
+        padding: 0.75rem;
+      }
+
+      .links {
+        flex-direction: row;
+        width: 10%;
+        gap: 1rem;
+        flex-wrap: nowrap;
+        line-height: 0.5;
+        justify-content: left;
+      }
+
+      .backs {
+        flex-direction: row;
+        line-height: 0.5;
+        justify-content: right;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+        width: 90%;
+      }
+
+      .kiri {
+        width: 100%;
+        height: auto;
+        max-height: 38%;
+        border-right: none;
+        padding: 0.75rem;
+        gap: 0.5rem;
+        flex-shrink: 0;
+        overflow-y: auto;
+        border-bottom: 2px dashed black;
+      }
+
+      .filter {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .warna {
+        flex-direction: row;
+        margin-bottom: 0;
+      }
+
+      .kanan {
+        width: 100%;
+        height: 100%;
+        border-left: none;
+        padding: 0.75rem;
+        overflow-y: auto;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.75rem
+      }
+
+      .movie picture,
+      .series picture {
+        width: 32%;
+      }
+
+      .info {
+        width: 68%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="links">
+      <a href="/index.html">[Home]</a>
+    </div>
+    <div class="backs">
+      <p><span>Watchlist</span></p>
+      <p><span id="updateDate">Updated: Loading...</span></p>
+    </div>
+  </header>
+
+  <main>
+    <aside class="kiri" id="filterPanel">
+
+      <div class="warna" id="warnaStats">
+        <!-- diisi JS -->
+      </div>
+      <div class="filter">
+        <div class="filter-group">
+          <label for="typeFilter">type</label>
+          <select id="typeFilter">
+            <option value="all" selected>all types</option>
+            <option value="movie">movie</option>
+            <option value="series">series</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="genreFilter">genre</label>
+          <select id="genreFilter">
+            <option value="all" selected>all genres</option>
+            <!-- diisi JS -->
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="yearFilter">year</label>
+          <select id="yearFilter">
+            <option value="all" selected>all years</option>
+            <!-- diisi JS -->
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="ratingFilter">rating</label>
+          <select id="ratingFilter">
+            <option value="all" selected>all ratings</option>
+            <option value="5">5</option>
+            <option value="4.5">4.5</option>
+            <option value="4">4</option>
+            <option value="3.5">3.5</option>
+            <option value="3">3</option>
+            <option value="2.5">2.5</option>
+            <option value="2">2</option>
+            <option value="1.5">1.5</option>
+            <option value="1">1</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="reset-button" id="resetFilter">reset filter</button>
+
+      <!-- diisi JS -->
+    </aside>
+
+    <section class="kanan" id="contentArea">
+      <div class="loading">Loading entries...</div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      const filterType = document.getElementById('typeFilter');
+      const filterGenre = document.getElementById('genreFilter');
+      const filterYear = document.getElementById('yearFilter');
+      const filterRating = document.getElementById('ratingFilter');
+      const contentArea = document.getElementById('contentArea');
+      const warnaStats = document.getElementById('warnaStats');
+      const updateDate = document.getElementById('updateDate');
+
+      let allData = [];
+
+      async function loadData() {
+        try {
+          const response = await fetch('/json/movieseries.json');
+          if (!response.ok) throw new Error('Network response was not ok');
+          const json = await response.json();
+          allData = json.entries || [];
+
+          if (json.metadata && json.metadata.last_updated) {
+            updateDate.textContent = 'Updated: ' + json.metadata.last_updated;
+          }
+
+          renderArticles(allData);
+          populateFilters(allData);
+          applyFilters(allData);
+          updateWarnaStats(allData);
+        } catch (error) {
+          console.error('Error loading data:', error);
+          contentArea.innerHTML = '<div class="loading">Error loading data.</div>';
+        }
+      }
+
+      function renderArticles(data) {
+        contentArea.innerHTML = '';
+        if (!data || data.length === 0) {
+          contentArea.innerHTML = '<div class="loading">No entries found.</div>';
+          return;
+        }
+
+        data.forEach(item => {
+          const article = document.createElement('article');
+          article.className = item.type;
+          article.dataset.type = item.type;
+          article.dataset.genre = item.genre;
+          article.dataset.year = item.year;
+          article.dataset.rating = item.rating;
+
+          const ratingDisplay = item.rating ? item.rating + '/5' : '';
+
+          let dateDisplay = item.date || '';
+          if (Array.isArray(item.date)) {
+            dateDisplay = item.date.join(' - ');
+          }
+
+          const cinemaRow = item.cinema ? `
+            <tr>
+              <td>Cinema</td>
+              <td>${item.cinema}</td>
+            </tr>
+          ` : '';
+
+          const statusRow = item.status ? `
+            <tr>
+              <td>Status</td>
+              <td>${item.status}</td>
+            </tr>
+          ` : '';
+
+          article.innerHTML = `
+            <picture>
+              <img src="${item.poster}" alt="${item.title} poster" loading="lazy">
+            </picture>
+            <div class="info">
+              <h4>${item.title}</h4>
+              <section class="keterangan">
+                <table>
+                  <tr>
+                    <td>Date</td>
+                    <td>${dateDisplay}</td>
+                  </tr>
+                  <tr>
+                    <td>Genre</td>
+                    <td>${item.genre}</td>
+                  </tr>
+                  ${statusRow}
+                  ${cinemaRow}
+                  <tr>
+                    <td>Rating</td>
+                    <td>${ratingDisplay}</td>
+                  </tr>
+                </table>
+                <div class="review">
+                  <p>${item.review || 'No review'}</p>
+                </div>
+              </section>
+            </div>
+          `;
+          contentArea.appendChild(article);
+        });
+      }
+
+      function populateFilters(data) {
+        const genres = new Set();
+        const years = new Set();
+
+        data.forEach(item => {
+          const genreList = item.genre.split(',').map(g => g.trim()).filter(g => g);
+          genreList.forEach(g => genres.add(g));
+          if (item.year) years.add(item.year);
+        });
+
+        const sortedGenres = Array.from(genres).sort();
+        const sortedYears = Array.from(years).sort((a, b) => b - a);
+
+        const genreSelect = filterGenre;
+        genreSelect.innerHTML = '<option value="all" selected>all genres</option>';
+
+        const genreCount = {};
+        data.forEach(item => {
+          const genreList = item.genre.split(',').map(g => g.trim()).filter(g => g);
+          genreList.forEach(g => {
+            genreCount[g] = (genreCount[g] || 0) + 1;
+          });
+        });
+
+        sortedGenres.forEach(genre => {
+          const option = document.createElement('option');
+          option.value = genre;
+          const count = genreCount[genre] || 0;
+          option.textContent = `${genre} (${count})`;
+          genreSelect.appendChild(option);
+        });
+
+        const yearSelect = filterYear;
+        yearSelect.innerHTML = '<option value="all" selected>all years</option>';
+        sortedYears.forEach(year => {
+          const option = document.createElement('option');
+          option.value = year;
+          option.textContent = year;
+          yearSelect.appendChild(option);
+        });
+      }
+
+      function updateWarnaStats(data) {
+        const movieCount = data.filter(item => item.type === 'movie').length;
+        const seriesCount = data.filter(item => item.type === 'series').length;
+
+        warnaStats.innerHTML = `
+          <div class="warna-row movie-badge"> Movie
+            <span class="warna-total">(${movieCount})</span>
+          </div>
+          <div class="warna-row series-badge"> Series
+            <span class="warna-total">(${seriesCount})</span>
+          </div>
+        `;
+      }
+
+      function updateGenreOptions(data, filteredIndices) {
+        const genreSelect = filterGenre;
+        const currentValue = genreSelect.value;
+
+        const genreCount = {};
+        filteredIndices.forEach(idx => {
+          const item = data[idx];
+          const genreList = item.genre.split(',').map(g => g.trim()).filter(g => g);
+          genreList.forEach(g => {
+            genreCount[g] = (genreCount[g] || 0) + 1;
+          });
+        });
+
+        const allGenres = new Set();
+        data.forEach(item => {
+          const genreList = item.genre.split(',').map(g => g.trim()).filter(g => g);
+          genreList.forEach(g => allGenres.add(g));
+        });
+        const sortedGenres = Array.from(allGenres).sort();
+
+        genreSelect.innerHTML = '<option value="all" selected>all genres</option>';
+        sortedGenres.forEach(genre => {
+          const option = document.createElement('option');
+          option.value = genre;
+          const count = genreCount[genre] || 0;
+          option.textContent = `${genre} (${count})`;
+          genreSelect.appendChild(option);
+        });
+
+        if (currentValue && genreSelect.querySelector(`option[value="${currentValue}"]`)) {
+          genreSelect.value = currentValue;
+        } else {
+          genreSelect.value = 'all';
+        }
+      }
+
+      function applyFilters(data) {
+        const typeVal = filterType.value;
+        const genreVal = filterGenre.value.toLowerCase().trim();
+        const yearVal = filterYear.value;
+        const ratingVal = filterRating.value;
+
+        const articles = document.querySelectorAll('#contentArea article');
+        let visibleCount = 0;
+        const filteredIndices = [];
+
+        articles.forEach((article, index) => {
+          const item = data[index];
+          if (!item) return;
+
+          let show = true;
+
+          if (typeVal !== 'all' && item.type !== typeVal) {
+            show = false;
+          }
+
+          if (show && genreVal !== 'all') {
+            const genres = item.genre.split(',').map(g => g.trim().toLowerCase());
+            if (!genres.includes(genreVal)) {
+              show = false;
+            }
+          }
+
+          if (show && yearVal !== 'all') {
+            const yearNum = parseInt(yearVal, 10);
+            if (!isNaN(yearNum) && item.year !== yearNum) {
+              show = false;
+            }
+          }
+
+          if (show && ratingVal !== 'all') {
+            const selectedRating = parseFloat(ratingVal);
+            if (isNaN(item.rating) || item.rating !== selectedRating) {
+              show = false;
+            }
+          }
+
+          if (show) {
+            article.classList.remove('hidden-article');
+            visibleCount++;
+            filteredIndices.push(index);
+          } else {
+            article.classList.add('hidden-article');
+          }
+        });
+
+        updateGenreOptions(data, filteredIndices);
+      }
+
+      function initEventListeners(data) {
+        filterType.addEventListener('change', function () {
+          applyFilters(data);
+        });
+        filterGenre.addEventListener('change', function () {
+          applyFilters(data);
+        });
+        filterYear.addEventListener('change', function () {
+          applyFilters(data);
+        });
+        filterRating.addEventListener('change', function () {
+          applyFilters(data);
+        });
+
+        document.getElementById('resetFilter').addEventListener('click', function () {
+          filterType.value = 'all';
+          filterGenre.value = 'all';
+          filterYear.value = 'all';
+          filterRating.value = 'all';
+          applyFilters(data);
+        });
+      }
+
+      loadData().then(() => {
+        if (allData.length > 0) {
+          initEventListeners(allData);
+        }
+      });
+
+    })();
+  </script>
+
+</body>
+
+</html>

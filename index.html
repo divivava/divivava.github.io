@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>divivava</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kablammo&family=Rock+3D&family=Rubik+Puddles&family=Ubuntu+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        @font-face {
+            font-family: "filmstrip";
+            src: url("/font/YummyLollipop-Regular.ttf") format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "buba";
+            src: url("/font/Roundabout.ttf") format("truetype");
+            font-display: swap;
+        }
+
+        :root {
+            font-size: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Ubuntu Mono", monospace;
+            scrollbar-width: thin;
+        }
+
+        body {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% - 14rem);
+            color: #000000;
+            border: 2px solid black;
+            box-shadow: 0px 0px 1rem grey;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 0px;
+            overflow: auto;
+            height: 32rem;
+        }
+
+        header {
+            background: rgb(255, 255, 130);
+            height: 3rem;
+            border-bottom: 2px solid black;
+            padding: 1rem;
+            font-size: 1rem;
+            text-align: center;
+            align-content: center;
+            display: flex;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        .links,
+        .backs {
+            display: flex;
+            align-self: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .kiri {
+            width: 80%;
+            height: 100%;
+            overflow: auto;
+            padding: 10px;
+            background: url('https://ik.imagekit.io/elaravoid/divivava/index.jpg');
+            background-size: 100%;
+            background-position: center;
+        }
+
+        .kiri img {
+            display: block;
+            margin: 0;
+            position: absolute;
+        }
+
+        .kanan {
+            width: 20%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='16' height='16' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(135)'%3E%3Crect width='100%25' height='100%25' fill='rgba(255, 255, 255,1)'/%3E%3Ccircle cx='40' cy='20' r='4' fill='rgba(173, 216, 230,0.5)'/%3E%3Ccircle cx='0' cy='20' r='4' fill='rgba(173, 216, 230,0.5)'/%3E%3Ccircle cx='20' cy='40' r='4' fill='rgba(173, 216, 230,0.5)'/%3E%3Ccircle cx='20' cy='0' r='4' fill='rgba(173, 216, 230,0.5)'/%3E%3Ccircle cx='40' cy='0' r='4' fill='rgba(255, 255, 130, 1)'/%3E%3Ccircle cx='0' cy='40' r='4' fill='rgba(255, 255, 130, 1)'/%3E%3Ccircle cx='40' cy='40' r='4' fill='rgba(255, 255, 130, 1)'/%3E%3Ccircle cx='0' cy='0' r='4' fill='rgba(255, 255, 130, 1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ")
+        }
+
+        .kotak {
+            text-align: center;
+            align-content: center;
+            border-left: 2px solid black;
+            border-bottom: 2px dashed black;
+            height: 100%;
+        }
+
+        .kotak:last-child {
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                display: flex;
+                flex-direction: column;
+                overflow: auto;
+                height: 91%;
+            }
+
+            body {
+                height: calc(100% - 1rem);
+                width: calc(100% - 1rem);
+                overflow: hidden;
+                box-shadow: none;
+            }
+
+            header {
+                height: 9%;
+                padding: 0.75rem;
+            }
+
+            .kanan {
+                grid-template-columns: repeat(2, 1fr);
+                width: 100%;
+                height: 42%;
+            }
+
+            .kiri {
+                background-size: 120%;
+                width: 100%;
+                height: 58%;
+            }
+
+            .kotak {
+                border-bottom: 2px dashed black;
+            }
+
+            .kotak:nth-child(1),
+            .kotak:nth-child(2) {
+                border-top: 2px solid black;
+            }
+
+            .kotak:nth-child(3),
+            .kotak:nth-child(4) {
+                border-top: 2px dashed black;
+            }
+
+            .kotak:nth-child(1),
+            .kotak:nth-child(2),
+            .kotak:nth-child(3),
+            .kotak:nth-child(4) {
+                border-bottom: none !important
+            }
+
+            .kotak:nth-child(1),
+            .kotak:nth-child(3) {
+                border-left: none !important
+            }
+
+            .kotak:nth-child(2),
+            .kotak:nth-child(4) {
+                border-left: 2px dashed black
+            }
+
+            .links {
+                flex-direction: row;
+                width: 50%;
+                gap: 0.75rem;
+                flex-wrap: wrap;
+                line-height: 0.5;
+                justify-content: left;
+                align-items: self-start;
+            }
+
+            .backs {
+                flex-direction: column;
+                line-height: 0.5;
+                gap: 0.75rem;
+                justify-content: left;
+                align-items: self-end;
+            }
+        }
+
+        span {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            background: lightblue;
+            padding: 0px 6px;
+            border-radius: 1rem;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            text-shadow: 2px 2px 5px hotpink;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: rgb(255, 105, 180);
+        }
+
+        header a {
+            color: black;
+            text-shadow: none;
+        }
+
+        header a:hover {
+            color: rgb(173, 216, 230);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="links">
+            <a href="mailto:divanianuro@gmail.com">[Mail]</a>
+            <a href="mailto:divanianuro@gmail.com">[Spotify]</a>
+            <a href="mailto:divanianuro@gmail.com">[Letterboxd]</a>
+        </div>
+        <div class="backs">
+            <p><span>Divivava</span></p>
+            <p><span>Updated: 7/7/2026</span></p>
+        </div>
+    </header>
+    <main>
+        <div class="kiri">
+        </div>
+        <div class="kanan">
+            <div class="kotak">
+                <a href="/blog.html" style="font-family: 'Rubik Puddles'; font-size: 3.2rem;">BLOG</a>
+            </div>
+            <div class="kotak">
+                <a href="/project.html" style="font-family: 'buba'; font-size: 1.6rem; line-height: 1.6;">Art &
+                    Project</a>
+            </div>
+            <div class="kotak">
+                <a href="/food.html" style="font-family: 'Kablammo'; font-size: 2.7rem; line-height: 0.9;">Food
+                    Diary</a>
+            </div>
+            <div class="kotak">
+                <a href="/watchlist.html"
+                    style="font-family: 'Rock 3D'; font-size: 2.3rem; line-height: 1;">WATCH LIST</a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
